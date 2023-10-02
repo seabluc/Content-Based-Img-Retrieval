@@ -10,8 +10,7 @@ import java.util.*;
 import javax.imageio.ImageIO;
 
 
-public class readImage
-{
+public class readImage {
   int imageCount = 1;
   double intensityBins [] = new double [26];
   double intensityMatrix [][] = new double[100][26];
@@ -21,24 +20,19 @@ public class readImage
   /*Each image is retrieved from the file.  The height and width are found for the image and the getIntensity and
    * getColorCode methods are called.
   */
-  public readImage()
-  {
-    while(imageCount < 101){
-      try
-      {
-        // the line that reads the image file
-      ///////////////////  
-	///your code///
-	//////////////////
+  private BufferedImage image;
+  public readImage() {
+    while(imageCount < 101) {
+      try {
+        image = ImageIO.read(new File(""));
       } 
-      catch (IOException e)
-      {
-        System.out.println("Error occurred when reading the file.");
+      catch (IOException e) {
+        e.printStackTrace();
       }
     }
     
-    writeIntensity();
-    writeColorCode();
+  //  writeIntensity();
+  //  writeColorCode();
     
   }
   
